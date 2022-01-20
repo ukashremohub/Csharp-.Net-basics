@@ -1,0 +1,67 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{ 
+	    Console.Write("Enter Operation (sum/sub/mul/div) : ");
+		string Operation_string=Console.ReadLine();
+	    int a = Convert.ToInt32(Console.ReadLine());
+	    int b = Convert.ToInt32(Console.ReadLine());
+		Addition A;
+		try
+		{
+			if(Operation_string == "sum")
+			{
+			  A = new Addition();
+		      Console.WriteLine("Sum of two numbers : "+ A.Operation(a,b));
+			}
+		
+			else if(Operation_string == "sub")
+			{
+			   A = new Subraction();
+			   Console.WriteLine("Sub of two numbers : "+ A.Operation(a,b));
+			}
+
+			else if(Operation_string == "mul")
+			{
+			   A = new Multiplication();
+			   Console.WriteLine("Mul of two numbers : "+ A.Operation(a,b));
+			}
+
+			else if(Operation_string == "div")
+			{
+				A = new Division();
+			    Console.WriteLine("Div of two numbers : "+ A.Operation(a,b));
+			} 
+			
+		}catch(Exception e){
+		Console.WriteLine("Error! "+ e.Message);
+		}	
+				
+	}
+}
+public class Addition{
+   public virtual int Operation(int a,int b)
+   {
+	   return a+b;
+   }
+}
+public class Subraction : Addition{
+	public override int Operation(int a,int b)
+	{
+		return a-b;
+	}
+}
+public class Multiplication : Addition{
+	public override int Operation(int a,int b)
+	{
+       return a*b;
+    }
+}
+public class Division : Addition{
+	public override int Operation(int a,int b)
+	{
+        return a/b;
+    }
+} 
