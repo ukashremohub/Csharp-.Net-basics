@@ -1,0 +1,14 @@
+C:\Users\uwaran\source\repos\Test2\Test2\bin\Debug\netcoreapp3.1\Test2.exe
+C:\Users\uwaran\source\repos\Test2\Test2\bin\Debug\netcoreapp3.1\Test2.deps.json
+C:\Users\uwaran\source\repos\Test2\Test2\bin\Debug\netcoreapp3.1\Test2.runtimeconfig.json
+C:\Users\uwaran\source\repos\Test2\Test2\bin\Debug\netcoreapp3.1\Test2.runtimeconfig.dev.json
+C:\Users\uwaran\source\repos\Test2\Test2\bin\Debug\netcoreapp3.1\Test2.dll
+C:\Users\uwaran\source\repos\Test2\Test2\bin\Debug\netcoreapp3.1\Test2.pdb
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.csproj.AssemblyReference.cache
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.AssemblyInfoInputs.cache
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.AssemblyInfo.cs
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.csproj.CoreCompileInputs.cache
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.dll
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.pdb
+C:\Users\uwaran\source\repos\Test2\Test2\obj\Debug\netcoreapp3.1\Test2.genruntimeconfig.cache
