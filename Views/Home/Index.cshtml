@@ -1,0 +1,107 @@
+﻿@model IEnumerable <ContactManagement.Models.Contact>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<html>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        padding: 15px;
+    }
+    td{
+        align-content:space-between;
+
+    }
+
+    table {
+        width: 100%;
+    }
+</style>
+<body>
+
+    <h2>A basic HTML table</h2>
+    <p class="text-right">
+        @*@Html.ActionLink("Create New", "Create")*@
+        <button class="btn btn-primary" onclick="location.href='@Url.Action("Create","Home")'">Create</button>
+    </p>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PHONE NUMBER</th>
+            <th>ACTION</th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var contact in Model)
+            {
+    <tr>
+        @*<td>@Html.DisplayFor(ContactItem => contact.id)</td>
+        <td>@Html.DisplayFor(ContactItem => contact.Name)</td>
+        <td>@Html.DisplayFor(ContactItem => contact.PhoneNumber)</td>*@
+        <td>@contact.id</td>
+        <td>@contact.Name</td>
+        <td>@contact.PhoneNumber</td>
+        <td>
+            @* @Html.ActionLink("view", "view", new { id = contact.id })
+        @Html.ActionLink("update", "update", new { id = contact.id })
+        @Html.ActionLink("Delete", "Delete", new { id = contact.id })*@
+            <button class="btn btn-info" onclick="location.href='@Url.Action("view","Home",new { id = contact.id })'">View</button>
+            <button class="btn btn-warning" onclick="location.href='@Url.Action("Update","Home",new { id = contact.id})'">Update</button>
+            <button class="btn btn-danger" onclick="location.href='@Url.Action("Delete","Home",new { id = contact.id})'">Delete</button>
+        </td>
+
+
+    </tr>
+            }
+
+        }
+
+    </table>
+</body>
+</html>
+
+@*@scaffolding method*@
+@*@model IEnumerable<ContactManagement.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>*@
