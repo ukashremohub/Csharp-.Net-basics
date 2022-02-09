@@ -10,7 +10,7 @@ namespace ContactManagement.Manager
 {
     public class ContactFile
     {
-        string path = @"C:\Users\uwaran\Desktop\Test\ContactData.txt";
+        string path = @"C:\Users\uwaran\Desktop\.vs\Test\ContactData.txt";
         public void write(List<Contact> contacts)
         {
             //string path = @"C:\Users\uwaran\Desktop\Test\ContactData.txt";
@@ -26,7 +26,8 @@ namespace ContactManagement.Manager
 
         public List<Contact> read()
         {
-            //if (File.Exists(path))
+            if (!File.Exists(path))
+                File.Create(path).Close();
 
             var ContactData = JsonConvert.DeserializeObject<List<Contact>>(File.ReadAllText(path));
             if (ContactData == null)
